@@ -1,4 +1,4 @@
-*{  
+*{
   box-sizing: content-box;
   font-family: $font-family;
   -webkit-font-smoothing: unset;
@@ -12,14 +12,14 @@ p, h1, h2, h3, h4, h5, h6, label{
 }
 
 // 页面padding-left & padding-right只在.window-wrap .content-wrapper添加
-.window-wrap{  
+.window-wrap{
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
 
-  .content-wrapper{ 
+  .content-wrapper{
     margin: 0 auto;
     max-width: none;
     width: 100%;
@@ -30,8 +30,9 @@ p, h1, h2, h3, h4, h5, h6, label{
     font-size: 14px;
     padding: 0 0 40px;
     position: relative;
-    
-    
+    overflow-x: hidden;
+
+
     .courses-container,
     .dashboard,
     .course-view,
