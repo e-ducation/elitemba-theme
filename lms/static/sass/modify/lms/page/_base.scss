@@ -69,8 +69,8 @@ a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.
 // select
 select{
   width: 230px;
-	height: 36px;
-	border-radius: 2px;
+  height: 36px;
+  border-radius: 2px;
   border: solid 1px #eeeeee;
   font-size: 14px;
   color: $font;
@@ -82,6 +82,10 @@ select{
   -webkit-appearance:none;
   background: url("/static/elitemba-theme/images/select.png") no-repeat scroll right center #fff;
   background-size: 15px;
+  &:focus{
+      outline:none;
+      border:none;
+  }
 }
 
 select::-ms-expand { display: none; }

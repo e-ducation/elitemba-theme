@@ -17,15 +17,19 @@
     padding: 0;
     margin-bottom: 20px;
 }
-.account-settings-sections .account-nav{
-    padding: 12px 22px;
+.wrapper-account-settings .wrapper-header .account-nav{
+    padding: 18px 22px;
     border-bottom: 1px solid  #f5f7fa;
+    width: 100%;
+    margin: 0 0 15px 0;
     .account-nav-link{
       background: #fff;
       border: none;
       font-size: 14px;
+      padding: 0 35px 0 0;
       &.active{
         color: $primary;
+        border: none;
       }
       &:active, &:hover, &:focus{
         color: $primary;
@@ -106,8 +110,10 @@
     font-size: 14px;
     margin-bottom: 15px;
 }
+
 .account-settings-sections .section .account-settings-section-body .u-field .field{
     margin-bottom: 0;
+    max-width: 346px;
 }
 .account-settings-sections .section .account-settings-section-body .u-field-readonly .u-field-value{
     font-size: 14px;
@@ -126,7 +132,6 @@
     color:$primary;
 }
 .account-settings-sections .u-field-value.field select{
-    box-sizing: border-box;
     height: 34px;
 }
 .account-settings-sections .section .account-settings-section-body .u-field.u-field-dropdown .u-field-value, .account-settings-sections .section .account-settings-section-body .u-field.editable-never .account-settings-sections .section .account-settings-section-body .u-field.mode-display .u-field-value{
@@ -193,7 +198,7 @@
         color: $primary;
         text-align: center;
     }
-   
+
 }
 .account-settings-sections .section .account-settings-section-body .u-field .social-field-linked{
     .u-field-link{
@@ -268,7 +273,7 @@
     background-size: 300px;
     background-image: url("/static/elitemba-theme/images/iconfont.png");
     background-position: -200px -120px;
-    transform: scale(0.5); 
+    transform: scale(0.5);
 }
 .account-settings-sections #about-tab{
     padding-left: 0;
@@ -334,13 +339,13 @@
     box-shadow: none;
 }
 .paragon__modal-dialog{
-    box-shadow: 0px 3px 6px 0px 
+    box-shadow: 0px 3px 6px 0px
 		rgba(46, 49, 60, 0.41);
 }
 .paragon__form-group{
     #label-asInput1{
        color: $title;
-       font-size: 14px;  
+       font-size: 14px;
     }
     #asInput1{
         background-color: #ffffff;
@@ -349,7 +354,7 @@
         outline: none;
         box-shadow: none;
         &:focus{
-            box-shadow: 0px 1px 2px 0px 
+            box-shadow: 0px 1px 2px 0px
                 $border;
             border-radius: 2px;
             border: solid 1px $primary;
@@ -363,26 +368,26 @@
 }
 .paragon__modal-body .paragon__alert-warning{
     background-color: #fffaf6;
-	box-shadow: 0px 1px 4px 0px 
+	box-shadow: 0px 1px 4px 0px
 		#ffe4d1;
 	border-radius: 3px;
     border: solid 1px #ffe4d1;
     padding-top: 24px;
     padding-bottom: 24px;
-    
+
     #delete-confirmation-body-warning-icon{
-        color: #fa7f2b;  
+        color: #fa7f2b;
     }
     p{
        font-size: 14px;
-       color: $font; 
+       color: $font;
        padding-top: 20px;
        line-height: 1.5em;
        margin: 0;
        font-weight: normal;
     }
 }
-.u-field-message-notification .fa-check, 
+.u-field-message-notification .fa-check,
 .u-field .message-success{
     vertical-align: middle;
 }
@@ -453,14 +458,16 @@
       #about-tab{
         padding-left: 10px;
       }
-      .account-nav{
+
+    }
+    .wrapper-account-settings .wrapper-header .account-nav{
         padding: 5px;
+        box-sizing: border-box;
         .account-nav-link{
-          width: 49%;
-          padding: 15px 10px;
-          box-sizing: border-box;
-          text-align: left;
+            width: 49%;
+            padding: 15px 10px;
+            box-sizing: border-box;
+            text-align: left;
         }
-      } 
-    } 
+    }
 }

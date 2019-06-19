@@ -89,7 +89,7 @@ from openedx.core.djangoapps.user_api.accounts.utils import is_secondary_email_f
     $('.fa-message-close').click(function(){
         window.location.reload()
     });
-    
+
 </%static:require_module>
 <div class="phone-fileds" style="display:none">
     <div class="u-field u-field-button u-field-phone"><div class="u-field-value field">
@@ -104,7 +104,7 @@ from openedx.core.djangoapps.user_api.accounts.utils import is_secondary_email_f
         <span class="u-field-message-notification" aria-live="polite"></span>
         <span class="u-field-message-help" id="u-field-message-help-phone">${_(u"Bind your EliteMBA account to your cellphone number.")}</span>
     </span>
-    </div> 
+    </div>
 </div>
 <script type="text/javascript">
      window.auth = ${ auth | n, dump_js_escaped_json };
