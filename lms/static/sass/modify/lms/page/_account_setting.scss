@@ -111,10 +111,13 @@
     margin-bottom: 15px;
 }
 
-.account-settings-sections .section .account-settings-section-body .u-field .field{
+.account-settings-sections .section .account-settings-section-body .u-field-text .field,
+.account-settings-sections .section .account-settings-section-body .u-field-password .field,
+.account-settings-sections .section .account-settings-section-body .u-field-phone .field,
+.account-settings-sections .section .account-settings-section-body .u-field-dropdown .field{
     margin-bottom: 0;
-    max-width: 349px;
     width: 31%;
+    max-width: 349px;
 }
 .account-settings-sections .section .account-settings-section-body .u-field-readonly .u-field-value{
     font-size: 14px;
@@ -407,6 +410,10 @@
     .account-settings-section-body.ordersTabSections-section-body div:nth-of-type(2) {
         display: none;
     }
+    .account-settings-sections .section .account-settings-section-body .u-field .field{
+        max-width: 1000px;
+        width: 100%;
+    }
 }
 @media screen and (max-width:770px){
   .account-settings-sections #accountsTabSections-tabpanel .section .account-settings-section-body .u-field{
@@ -425,6 +432,7 @@
   .u-field-order-lines{
       padding-top: 10px;
   }
+
 }
 
 @media screen and (max-width:568px){
