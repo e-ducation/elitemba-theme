@@ -1,5 +1,5 @@
 // course tabs
-.content-wrapper .course-tabs{  
+.content-wrapper .course-tabs{
   max-width: 1200px;
   margin: 0 auto;
   overflow-x:hidden !important;
@@ -35,7 +35,7 @@ body.view-in-course .wrapper-course-material .course-tabs{
   display: flex;
   flex-wrap: wrap;
   padding: 10px 0 !important;
-  .tab a{ 
+  .tab a{
     padding: 10px 15px 10px 10px;
     border: none;
     color: $title;
@@ -70,7 +70,7 @@ body.view-in-course .wrapper-course-material .course-tabs{
   .page-header-search{
     margin-right: 10px;
   }
-  
+
   @media(max-width:767px){
     .form-actions{
       margin-top: 0;
@@ -93,7 +93,7 @@ body.view-in-course .wrapper-course-material .course-tabs{
 
 
 // course_course
-#course-container{  
+#course-container{
   border-radius: 3px;
   box-shadow:0px 1px 4px 0px $border;
   margin-bottom:40px;
@@ -101,14 +101,14 @@ body.view-in-course .wrapper-course-material .course-tabs{
 
   // course_course_header
   .page-header{
-    .page-header-main .page-title{  
+    .page-header-main .page-title{
       font-size: 18px;
       margin: 0;
       line-height: 36px;
       color:$title;
       font-weight: normal;
     }
-    .action-resume-course{ 
+    .action-resume-course{
       @extend %btn-my-primary;
       vertical-align: inherit;
     }
@@ -125,23 +125,23 @@ body.view-in-course .wrapper-course-material .course-tabs{
     .btn{
       @extend %btn-my-primary;
     }
-  } 
+  }
 
-  
+
   // course_course_content layout
-  .page-content{  
+  .page-content{
     padding: 40px 20px;
   }
 
-  .page-content .page-content-secondary{  
+  .page-content .page-content-secondary{
     margin-left:0px;
   }
 
-  .course-outline{ 
+  .course-outline{
     padding-left: 20px;
   }
 
-  #expand-collapse-outline-all-button{  
+  #expand-collapse-outline-all-button{
     @extend %btn-my-white;
     background-color: rgba(182, 220, 254, 0.5);
     span{
@@ -160,28 +160,28 @@ body.view-in-course .wrapper-course-material .course-tabs{
 .course-outline .block-tree .section {
   border-bottom:none;
 
-  button.accordion-trigger{ 
+  button.accordion-trigger{
     outline:none;
     padding: 8px 0;
   }
 
-  .section-name .section-title{  
+  .section-name .section-title{
     color:$title;
     font-size: 16px;
     padding-left: 10px;
   }
 
-  
-  ol.outline-item .subsection{ 
+
+  ol.outline-item .subsection{
     border-top:none;
     margin: 0 0 0 25px;
 
-    .subsection-title{  
+    .subsection-title{
       color:$font;
       margin-left:10px;
       font-size: 14px;
     }
-    .vertical a.outline-item{ 
+    .vertical a.outline-item{
       border-top:none;
       padding: 6px 0;
       font-size: 14px;
@@ -190,7 +190,7 @@ body.view-in-course .wrapper-course-material .course-tabs{
         color: $primary;
       }
     }
-    .subsection-text .details{  
+    .subsection-text .details{
       color:$font;
       font-size: 14px;
       margin-left: 25px;
@@ -203,11 +203,11 @@ body.view-in-course .wrapper-course-material .course-tabs{
 
 // sidebar
 // course tools
-.section.section-tools,.section.section-dates,.section.section-handouts{  
+.section.section-tools,.section.section-dates,.section.section-handouts{
   padding: 15px;
 }
 
-.course-sidebar .section h3{  
+.course-sidebar .section h3{
   font-size: 16px;
   font-weight: normal;
   color:$title;
@@ -215,7 +215,7 @@ body.view-in-course .wrapper-course-material .course-tabs{
 }
 
 
-.section.section-tools{  
+.section.section-tools{
   border-radius: 4px;
   border: 1px solid #e6e9ed;
   ul{ margin-bottom: 0 }
@@ -228,29 +228,29 @@ body.view-in-course .wrapper-course-material .course-tabs{
 
 // dates
 .date-summary-container{
-  .date-summary-todays-date{  
+  .date-summary-todays-date{
     border-left:3px solid #d8d8d8
   }
-  .date-summary-verified-upgrade-deadline{  
+  .date-summary-verified-upgrade-deadline{
     border-left:3px solid #d8d8d8
   }
 
-  .date-summary{  
+  .date-summary{
     padding: 6px 10px;
     color: $font;
-    .heading,.date,.description{ 
+    .heading,.date,.description{
       color: $font;
       font-weight: normal;
       font-size: 14px;
     }
-  } 
-} 
+  }
+}
 
 // handouts
 .section.section-handouts{
   ul li a{
     color: $font;
-    &:hover{ 
+    &:hover{
       color: $primary;
     }
   }
@@ -273,7 +273,7 @@ body.view-in-course .wrapper-course-material .course-tabs{
   .dismiss-message .btn-link:focus{
     outline: none;
   }
-} 
+}
 
 // course-message
 .course-message{
@@ -287,15 +287,15 @@ body.view-in-course .wrapper-course-material .course-tabs{
     border: 1px solid #e6e9ed;
     font-weight: normal;
     font-size: 16px;
-    .message-header{ 
+    .message-header{
       color: $title;
       margin-bottom: 7px;
       font-weight: normal;
     }
   }
-}  
+}
 
-// view this course as 
+// view this course as
 body.view-in-course .wrapper-preview-menu, .wrapper-preview-menu{
   background-color: rgba(182, 220, 254, 0.1);
   border: solid 1px $border;
@@ -306,7 +306,10 @@ body.view-in-course .wrapper-preview-menu, .wrapper-preview-menu{
   }
   .preview-actions .action-preview{
     select{
-      width: 250px;
+      width: 249px;
+      &:focus{
+        border:solid 1px #eeeeee;
+      }
     }
     .action-preview-label{
       color: $primary;
@@ -316,8 +319,8 @@ body.view-in-course .wrapper-preview-menu, .wrapper-preview-menu{
       @extend %input-my;
     }
   }
-  
-  
+
+
 }
 @media screen and (max-width:767px){
   .course-sidebar{
@@ -340,7 +343,7 @@ body.view-in-course .wrapper-preview-menu, .wrapper-preview-menu{
     .course-outline{
       padding-left: 0;
     }
-  } 
+  }
 }
 
 @media screen and (max-width:576px){
@@ -368,7 +371,7 @@ body.view-in-course .wrapper-preview-menu, .wrapper-preview-menu{
   .bookmarks-results-list-item:hover{
     opacity: 1;
   }
-} 
+}
 
 // course update
 .course-updates .all-updates .updates-article{

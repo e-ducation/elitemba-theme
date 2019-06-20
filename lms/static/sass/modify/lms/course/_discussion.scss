@@ -156,7 +156,7 @@
     margin-left: 0;
   }
   .content-wrapper .discussion-board .page-content .discussion-body .discussion-article{
-    padding: 20px;
+    padding: 20px 10px;
   }
 }
 
@@ -211,7 +211,7 @@
   .forum-nav-refine-bar{
     border-bottom: none;
     background: none;
-    padding:  5px 0;
+    padding:  5px;
   }
   .forum-nav-filter-main-control,
   .forum-nav-sort-control{
@@ -307,6 +307,9 @@
   max-width: 180px;
   display: inline-block;
   height: 20px;
+}
+.discussion-article .response-header{
+    padding-right: 40px;
 }
 
 
