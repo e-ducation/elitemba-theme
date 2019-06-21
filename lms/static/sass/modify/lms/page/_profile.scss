@@ -47,7 +47,10 @@
     vertical-align: inherit;
     margin-left: 0;
     select{
-      width: 230px;
+      width: 229px;
+      &:focus{
+          border: 1px solid #eeeeee;
+      }
     }
   }
   .u-field-message{
