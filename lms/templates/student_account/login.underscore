@@ -1,5 +1,38 @@
 <div class="js-form-feedback" aria-live="assertive" tabindex="-1">
 </div>
+<style>
+    .tabs{
+        text-align: center;
+    }
+    .tabs span{
+        display: inline-block;
+        width: 30%;
+        text-align: center;
+        cursor: pointer;
+    }
+    .tabs .tabs-line{
+        color: #e6e9ed;
+    }
+    .tab-active{
+        color: #4788C7;
+    }
+    #scan{
+        text-align: center;
+        padding: 25px 0;
+        line-height: 1.5;
+    }
+    #scan span{
+        color: #4788C7;
+        padding: 0 5px;
+    }
+    #qrcode img{
+        padding: 10px;
+        border: 1px solid #ccd1d9;
+        border-radius: 4px;
+        margin: 0 auto 20px;
+    }
+
+</style>
 
 <% if ( context.createAccountOption !== false && !context.syncLearnerProfileData && !(context.enterpriseName && context.currentProvider) ) { %>
 <div class="toggle-form">
@@ -24,10 +57,14 @@
     </p>
     <p><%- gettext("To continue learning with this account, sign in below.") %></p>
 <% } else { %>
-    <h2><%- gettext("Sign In") %></h2>
+    <h2 class="tabs">
+        <span id="tab-login" class="tab-active"><%- gettext("Sign In") %></span>
+        <b class="tabs-line">|</b>
+        <span id="tab-scan">扫码登录</span>
+    </h2>
 <% } %>
 
-<form id="login" class="login-form" autocomplete="off" tabindex="-1" method="POST">
+<form id="login" class="login-form" autocomplete="off" tabindex="-1" method="POST" style="display:block">
 
     <p class="sr">
         <% if ( context.providers.length > 0 && !context.currentProvider || context.hasSecondaryProviders ) { %>
@@ -73,3 +110,43 @@
     <% } %>
 </form>
 
+<div id="scan" style="display: none">
+    <div id="qrcode"></div>
+    <div>打开<span>英荔商学院</span>APP</div>
+    <div>在「我的」打开扫一扫</div>
+</div>
+
+
+<script>
+    var tab_login = document.getElementById('tab-login');
+    var tab_scan = document.getElementById('tab-scan');
+    var login = document.getElementById('login');
+    var scan = document.getElementById('scan');
+    console.log(tab_login)
+    console.log(document.getElementById('tab-login'))
+
+    tab_login.onclick = function() {
+        tab_login.classList = 'tab-active';
+        tab_scan.classList = '';
+        scan.style.display = 'none';
+        login.style.display = 'block';
+    }
+
+    tab_scan.onclick = function() {
+        tab_scan.classList = 'tab-active';
+        tab_login.classList = '';
+        login.style.display = 'none';
+        scan.style.display = 'block';
+        console.log($)
+        document.getElementById('qrcode').innerHTML = '';
+        var qrcode = new QRCode(document.getElementById('qrcode'), {
+            text: '',
+            width: 130,
+            height: 130,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        })
+    }
+</script>
+<script src="/static/elitemba-theme/js/certificates/qrcode.js"></script>
