@@ -158,27 +158,11 @@
 
 
     var timer = null;
-    function checkCodeStatus(url) {
-        timer = setInterval(function() {
-            $.ajax({
-                url: '/elitemba/api/v1/return__qr_code_status/?lms_login_qrcode=' + url,
-                type: 'GET',
-                success: function(res) {
-                    if(res.code === 200) {
-                        window.location.href = '/';
-                    } else if (res.code === 404){
-                        // 过期
-                        clearInterval(timer);
-                        document.getElementById('refresh').style.display = 'block';
-                    }
-                },
-            })
-        }, 1000)
-    }
 
     function getQrcode() {
         document.getElementById('qrcode').innerHTML = '';
-
+        timer && clearInterval(timer);
+        timer = null;
         $.ajax({
             url: '/elitemba/api/v1/get_qr_code/',
             type: 'GET',
@@ -192,10 +176,22 @@
                         colorLight : "#ffffff",
                         correctLevel : QRCode.CorrectLevel.H
                     });
-                    checkCodeStatus(res.data.lms_login_qrcode)
-
+                    timer = setInterval(function() {
+                        $.ajax({
+                            url: '/elitemba/api/v1/return__qr_code_status/?lms_login_qrcode=' + res.data.lms_login_qrcode,
+                            type: 'GET',
+                            success: function(res) {
+                                if(res.code === 200) {
+                                    window.location.href = '/';
+                                } else if (res.code === 404){
+                                    // 过期
+                                    clearInterval(timer);
+                                    document.getElementById('refresh').style.display = 'block';
+                                }
+                            },
+                        })
+                    }, 1000)
                 }
-
             }
         })
     }
