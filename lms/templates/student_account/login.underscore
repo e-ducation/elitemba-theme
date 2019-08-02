@@ -20,16 +20,35 @@
         text-align: center;
         padding: 25px 0;
         line-height: 1.5;
+
     }
     #scan span{
         color: #4788C7;
         padding: 0 5px;
+    }
+    .qrcode-container{
+        position: relative;
+        width: 152px;
+        margin: 0 auto;
     }
     #qrcode img{
         padding: 10px;
         border: 1px solid #ccd1d9;
         border-radius: 4px;
         margin: 0 auto 20px;
+    }
+    #refresh {
+        width: 100%;
+        height: 152px;
+        border-radius: 4px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding: 35px;
     }
 
 </style>
@@ -111,7 +130,13 @@
 </form>
 
 <div id="scan" style="display: none">
-    <div id="qrcode"></div>
+    <div class="qrcode-container">
+        <div id="qrcode"></div>
+        <div id="refresh" style="display:none">
+            二维码失效
+            <button class="action-primary" onClick="refreshQrcode()">刷新</button>
+        </div>
+    </div>
     <div>打开<span>英荔商学院</span>APP</div>
     <div>在「我的」打开扫一扫</div>
 </div>
@@ -122,8 +147,7 @@
     var tab_scan = document.getElementById('tab-scan');
     var login = document.getElementById('login');
     var scan = document.getElementById('scan');
-    console.log(tab_login)
-    console.log(document.getElementById('tab-login'))
+
 
     tab_login.onclick = function() {
         tab_login.classList = 'tab-active';
@@ -132,21 +156,62 @@
         login.style.display = 'block';
     }
 
+
+    var timer = null;
+    function checkCodeStatus(url) {
+        timer = setInterval(function() {
+            $.ajax({
+                url: '/elitemba/api/v1/return__qr_code_status/?lms_login_qrcode=' + url,
+                type: 'GET',
+                success: function(res) {
+                    if(res.code === 200) {
+                        window.location.href = '/';
+                    } else if (res.code === 404){
+                        // 过期
+                        clearInterval(timer);
+                        document.getElementById('refresh').style.display = 'block';
+                    }
+                },
+            })
+        }, 1000)
+    }
+
+    function getQrcode() {
+        document.getElementById('qrcode').innerHTML = '';
+
+        $.ajax({
+            url: '/elitemba/api/v1/get_qr_code/',
+            type: 'GET',
+            success: function(res) {
+                if (res.code === 200) {
+                    var qrcode = new QRCode(document.getElementById('qrcode'), {
+                        text: res.data.login_by_QRcode_url,
+                        width: 130,
+                        height: 130,
+                        colorDark : "#000000",
+                        colorLight : "#ffffff",
+                        correctLevel : QRCode.CorrectLevel.H
+                    });
+                    checkCodeStatus(res.data.lms_login_qrcode)
+
+                }
+
+            }
+        })
+    }
+
+    function refreshQrcode(){
+        document.getElementById('refresh').style.display = 'none';
+        getQrcode();
+    }
+
     tab_scan.onclick = function() {
         tab_scan.classList = 'tab-active';
         tab_login.classList = '';
         login.style.display = 'none';
         scan.style.display = 'block';
-        console.log($)
-        document.getElementById('qrcode').innerHTML = '';
-        var qrcode = new QRCode(document.getElementById('qrcode'), {
-            text: '',
-            width: 130,
-            height: 130,
-            colorDark : "#000000",
-            colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.H
-        })
+
+        getQrcode();
     }
 </script>
 <script src="/static/elitemba-theme/js/certificates/qrcode.js"></script>
