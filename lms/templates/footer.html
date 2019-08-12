@@ -42,7 +42,7 @@ binding = remind_users_to_bind_phones(request)
         </div>
       </div>
     </div>
-    
+
     <div class="footer-line"></div>
     <div class="footer-links">
       <div class="footer-list">
@@ -126,18 +126,18 @@ binding = remind_users_to_bind_phones(request)
     var checkPhone = $('#phone-binding').val();
     if (checkPhone == 'True'){
       var device = getQueryString('device');
-      // not in app 
+      // not in app
       if(device == undefined){
         $('.eliteu-message-box').show();
         $('.fa-message-close').click(function(){
           $('.eliteu-message-box').hide();
         });
-        
+
         $('.binding-btn').click(function(){
           $('.eliteu-message-box').hide();
           $('.phone-dialog').show();
           phoneDialog();
-    
+
         });
       }
     }
@@ -161,16 +161,22 @@ binding = remind_users_to_bind_phones(request)
 <script>
     var _hmt = _hmt || [];
     var getQueryString = function(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
-        var r = window.location.search.substr(1).match(reg); 
-        if (r != null) return unescape(r[2]); return null; 
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
     }
     var device = getQueryString('device');
     if(device == undefined){
     $(document).ready(function(){
         var hm = document.createElement("script");
       hm.src = "${settings.BAIDU_BRIDGE_URL}";
-      var s = document.getElementsByTagName("script")[0]; 
+      var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     });}
+</script>
+<script src="${static.url('js/pangu.min.js')}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.autoSpacingPage();
+  });
 </script>
