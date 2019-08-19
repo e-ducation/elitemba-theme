@@ -216,6 +216,12 @@ ga('send', 'pageview');
   <script type="text/javascript" src="${static.url('js/vendor/noreferrer.js')}" charset="utf-8"></script>
   <script type="text/javascript" src="${static.url('js/utils/navigation.js')}" charset="utf-8"></script>
   <script type="text/javascript" src="${static.url('js/header/header.js')}"></script>
+  <script src="${static.url('js/pangu.min.js')}"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        pangu.autoSpacingPage();
+    });
+  </script>
   <%static:optional_include_mako file="body-extra.html" is_theming_enabled="True" />
 </body>
 </html>
