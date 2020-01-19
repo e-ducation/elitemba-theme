@@ -52,7 +52,7 @@ binding = remind_users_to_bind_phones(request)
           <svg viewBox="0 0 1024 1024" class="qrcode-icon" data-icon="caret-down" width="1em" height="1em" fill="#fff" aria-hidden="true"><path d="M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z"></path></svg>
         </div>
       </div>
-      <img class="logo" src="${static.url('images/powered_by_Open_edX_logo.png')}" style="width: 140px; height: 35px; margin: 15px 0;"/>
+      <a src="https://open.edx.org" target="_blank"><img class="logo" src="${static.url('images/powered_by_Open_edX_logo.png')}" style="width: 140px; height: 35px; margin: 15px 0;"/></a>
     </div>
 
     <div class="footer-line">
@@ -61,7 +61,7 @@ binding = remind_users_to_bind_phones(request)
     <div class="footer-links">
       <div class="footer-list" id="logo-show" style="width: 100%;">
         <img class="logo" style="margin-right: 100px;" src="${static.url('images/logo.png')}" />
-        <img class="logo" src="${static.url('images/powered_by_Open_edX_logo.png')}" style="width: 140px; height: 35px; margin: 15px 0;"/>
+        <a src="https://open.edx.org" target="_blank"><img class="logo" src="${static.url('images/powered_by_Open_edX_logo.png')}" style="width: 140px; height: 35px; margin: 15px 0;"/></a>
       </div>
 
       <div class="footer-list">
@@ -107,8 +107,8 @@ binding = remind_users_to_bind_phones(request)
       <div>${_(u"Scan WeChat QR Code")}<br />${_(u"to find out more")}</div>
     </div>
   </div>
-  <div class="footer-text">© ${datetime.now(pytz.timezone(settings.TIME_ZONE)).year} ${_(u"Guangdong Elite International Education & Technology Co., Ltd.    All Rights Reserved")} <a href="${settings.ELITE_FILING_WEBSITE}" target="_blank">${_(settings.ELITE_CASE_NUMBER)}</a></div>
-  <div class="footer-text" style="margin-top: 10px;">${_(u"edX and Open edX are registered trademarks of edX Inc. All Rights Reserved.")}</div>
+  <div class="footer-text" style="margin-top: 20px;">© ${datetime.now(pytz.timezone(settings.TIME_ZONE)).year} ${_(u"Guangdong Elite International Education & Technology Co., Ltd.    All Rights Reserved")} <a href="${settings.ELITE_FILING_WEBSITE}" target="_blank">${_(settings.ELITE_CASE_NUMBER)}</a></div>
+  <div class="footer-text" style="margin-top: 14px;">${_(u"edX and Open edX are registered trademarks of edX Inc. All Rights Reserved.")}</div>
   
 </div>
 <div class="phone-dialog" style="display:none;">
