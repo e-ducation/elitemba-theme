@@ -22,7 +22,6 @@
     margin-right: 5%;
     vertical-align: text-top;
     height: 138px;
-    border-right: 1px dashed $border;
     padding-top: 22px;
   }
 
@@ -31,7 +30,7 @@
     display: inline-block;
     width: 13%;
     vertical-align: text-top;
-    border-left: 1px dashed $border;
+    // border-left: 1px dashed $border;
     padding-top: 22px;
     h3{
       text-align: center;
@@ -45,7 +44,8 @@
   }
   .footer-list{
     display: inline-block;
-    width: 24.5%;
+    // width: 24.5%;
+    margin-right: 98px;
     vertical-align: text-top;
     padding-top: 22px;
   }
@@ -84,7 +84,13 @@
 
   // 3. 左侧app按钮
   .logo{
-    height: 30px;
+    width: 254px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  .logo2{
+    width: 168px;
+    height: 41px;
   }
   .slogan{
     margin: 6px 30px 25px 34px;
@@ -142,12 +148,16 @@
 
   // Wechat
   .footer-qrcode{
-    width: 60px;
+    width: 88px;
+    height: 88px;
     margin: 10px 0;
     border: 1px solid $border;
   }
   .footer-wechat div{
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 22px;
+	  letter-spacing: 0px;
+	  color: #666666;
   }
 
   .footer-wechat h3{
