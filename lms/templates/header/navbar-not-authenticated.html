@@ -27,22 +27,37 @@ from django.conf import settings
       <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
         <a class="${'active ' if reverse('courses') in request.path else ''}tab-nav-link" href="${reverse('all_courses')}">${_('Explore courses')}</a>
       </div>
-    %endif
+    % endif
   % endif
+
+  <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+    <a class="${'active ' if reverse('membership') in request.path else ''}tab-nav-link" href="/">
+      ${_("首页")}
+    </a>
+  </div>
+
+  <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+    <a class="${'active ' if reverse('courses') in request.path else ''}tab-nav-link" href="${reverse('all_courses')}">
+      ${_('Explore courses')}
+    </a>
+  </div>
+
   % if settings.FEATURES.get('ENABLE_MEMBERSHIP_INTEGRATION'):
       <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
         <a class="${'active ' if reverse('membership') in request.path else ''}tab-nav-link" href="${reverse('membership')}">
-          ${_("Membership")}
+          ${_("加入会员")}
         </a>
       </div>
   % endif
+
   % if settings.FEATURES.get('ENABLE_PROFESSORS'):
-      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+      <!-- <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
         <a class="${'active ' if reverse('professor_index') in request.path else ''}tab-nav-link" href="${reverse('professor_index')}">
           ${_("Professors")}
         </a>
-      </div>
+      </div> -->
   % endif
+
   % if mktg_site_enabled:
     <div class="mobile-nav-item hidden-mobile nav-item">
       <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
