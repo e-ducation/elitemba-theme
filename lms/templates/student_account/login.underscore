@@ -76,7 +76,7 @@
     </p>
     <p><%- gettext("To continue learning with this account, sign in below.") %></p>
 <% } else { %>
-    <h2 class="tabs">
+    <h2 style="display:none" class="tabs">
         <span id="tab-login" class="tab-active"><%- gettext("Sign In") %></span>
         <b class="tabs-line">|</b>
         <span id="tab-scan">扫码登录</span>
