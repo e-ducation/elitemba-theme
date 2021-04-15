@@ -61,9 +61,15 @@ from django.conf import settings
     % endif
     % if show_explore_courses:
       <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a class="tab-nav-link" href="/">${_('首页')}</a>
+      </div>
 
+      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
         <a class="tab-nav-link" href="${reverse('all_courses')}">${_('Discover New')}</a>
+      </div>
 
+      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+          <a class="tab-nav-link" href="/vip/card">${_('加入会员')}</a>
       </div>
     % endif
     % if show_sysadmin_dashboard:
