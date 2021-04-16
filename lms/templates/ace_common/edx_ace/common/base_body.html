@@ -70,11 +70,11 @@
                                     style="width: 100%;
                                     min-width: 180px;
                                     "
-                                    src="http://{% firstof request.get_host "www.elitemba.cn" %}{% static 'images/logo.png' %}"
+                                    src="http://{% firstof request.get_host "www.elitemba.cn" %}{% static 'images/logo1.png' %}"
                                     alt="{% blocktrans %}Go to {{ platform_name }} Home Page{% endblocktrans %}"/></a>
                         </td>
                         <td align="right" style="text-align: {{ LANGUAGE_BIDI|yesno:"left,right" }};">
-                            <a class="login" href="{% with_link_tracking dashboard_url %}" style="color: #960909;">{%  trans "Sign In" %}</a>
+                            <a class="login" href="{% with_link_tracking dashboard_url %}" style="color: #0084FF;">{%  trans "Sign In" %}</a>
                         </td>
                     </tr>
                 </table>
