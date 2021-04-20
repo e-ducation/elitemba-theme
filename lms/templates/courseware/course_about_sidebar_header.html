@@ -48,7 +48,7 @@ import urllib
                 )
             )
 
-        share_text = _("A wonderful course is rare to find and must be shared! I'm taking {title} on EliteMBA. Check it out! {url}").format(
+        share_text = _("A wonderful course is rare to find and must be shared! I'm taking {title} on Elite A.I. Academy. Check it out! {url}").format(
             title=course.display_name_with_default_escaped,
             url=request.build_absolute_uri()
         )
@@ -60,7 +60,7 @@ import urllib
         weibostr = urllib.urlencode(weibo_dict)
         weibourl = "http://service.weibo.com/share/share.php?" + weibostr
 
-        qqshare_text = _("A wonderful course is rare to find and must be shared! I'm taking {title} on EliteMBA. Check it out! {url}").format(
+        qqshare_text = _("A wonderful course is rare to find and must be shared! I'm taking {title} on Elite A.I. Academy. Check it out! {url}").format(
             title=course.display_name_with_default_escaped,
             url=''
         )
