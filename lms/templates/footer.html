@@ -140,6 +140,8 @@ binding = remind_users_to_bind_phones(request)
       }
   }
 </script>
+
+% if static.get_value('BAIDU_BRIDGE_ENABLED', True):
 <script>
     var _hmt = _hmt || [];
     var getQueryString = function(name) {
@@ -156,3 +158,4 @@ binding = remind_users_to_bind_phones(request)
       s.parentNode.insertBefore(hm, s);
     });}
 </script>
+%endif
