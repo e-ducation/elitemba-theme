@@ -17968,7 +17968,7 @@ button:focus:not(:disabled), button:hover:not(:disabled), .btn-default {
     position: relative; }
   .my-footer .footer-app {
     display: inline-block;
-    width: 20%;
+    /* width: 20%; */
     margin-right: 5%;
     vertical-align: text-top;
     height: 138px;
@@ -18085,8 +18085,8 @@ button:focus:not(:disabled), button:hover:not(:disabled), .btn-default {
     padding: 40px 30px; }
     .my-footer h3 {
       padding: 0; }
-    .my-footer .footer-app, .my-footer .footer-wechat {
-      display: none; }
+    /* .my-footer .footer-app, .my-footer .footer-wechat {
+      display: none; } */
     .my-footer .footer-links {
       width: 100%;
       padding: 0 0 0 20px;
