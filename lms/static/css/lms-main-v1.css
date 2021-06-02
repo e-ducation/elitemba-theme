@@ -16295,7 +16295,7 @@ body.error .back-button.disabled, body.error .back-button.is-disabled {
 
 .global-header .header-logo a {
   float: left;
-  margin: 15px 0 0 40px;
+  margin: 18px 0 0 40px;
   display: block; }
 
 .global-header .header-logo a .logo {
@@ -17832,7 +17832,7 @@ button:focus:not(:disabled), button:hover:not(:disabled), .btn-default {
   .window-wrap .global-header .header-logo a {
     margin-left: 0px; }
   .window-wrap .global-header .header-logo a .logo {
-    height: 60px; }
+    height:60px;}
   .window-wrap .global-header .header-logo .course-header {
     margin: 14px 0 0 20px; }
     .window-wrap .global-header .header-logo .course-header .course-name {
@@ -17851,13 +17851,16 @@ button:focus:not(:disabled), button:hover:not(:disabled), .btn-default {
     height: 32px;
     width: 65px;
     line-height: 32px !important;
-    padding: 0 17px !important; }
+    padding: 0 !important; 
+    text-align:center;
+  }
   .window-wrap .global-header .nav-links .secondary a.register-btn {
     margin-top: 3px;
     height: 32px;
     width: 65px;
     line-height: 32px !important;
-    padding: 0 17px !important; }
+    padding: 0 !important; 
+    text-align:center; }
   .window-wrap .global-header .nav-links .secondary .username {
     max-width: 200px;
     display: inline-block;
