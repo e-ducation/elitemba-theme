@@ -148,6 +148,7 @@
     width: 88px;
     height: 88px;
     margin-bottom: 8px;
+    max-width: inherit;
   }
   .footer-wechat div{
     font-size: 14px;
@@ -178,7 +179,7 @@
       padding: 0;
     }
     .footer-app, .footer-wechat{
-      display: none;
+      // display: none;
     }
     .footer-links{
       width: 100%;
