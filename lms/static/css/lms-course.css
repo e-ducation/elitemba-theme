@@ -20667,14 +20667,16 @@ button:focus:not(:disabled), button:hover:not(:disabled), .btn-default {
   height: 32px;
   width: 65px;
   line-height: 32px !important;
-  padding: 0 17px !important;
+  padding: 0 !important;
+  text-align: center;
 }
 .window-wrap .global-header .nav-links .secondary a.register-btn {
   margin-top: 3px;
   height: 32px;
   width: 65px;
   line-height: 32px !important;
-  padding: 0 17px !important;
+  padding: 0 !important;
+  text-align: center;
 }
 .window-wrap .global-header .nav-links .secondary .username {
   max-width: 200px;
@@ -20875,7 +20877,6 @@ button:focus:not(:disabled), button:hover:not(:disabled), .btn-default {
 }
 .my-footer .logo {
   width: 254px;
-  height: 60px;
   margin-bottom: 15px;
 }
 .my-footer .logo2 {
