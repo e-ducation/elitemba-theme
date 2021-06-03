@@ -16,10 +16,11 @@
   }
   .header-logo a{
     margin-left: 0px;
-    margin-top:18px;
+    margin-top:21px;
   }
   .header-logo a .logo{
-    height: 60px;
+    height: 54.36px;
+    width:254px;
   }
   .header-logo .course-header{
     margin: 27px 0 0 20px;
@@ -184,7 +185,7 @@
 @media screen and (min-width: 768px){
   .global-header .nav-links .secondary .dropdown-user-menu{
     right:8px !important;
-    top: 49px !important;
+    top: 79px !important;
   }
 
 }
