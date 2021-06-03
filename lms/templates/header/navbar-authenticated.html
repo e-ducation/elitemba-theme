@@ -31,8 +31,8 @@ from django.conf import settings
   <div class="main">
     % if show_dashboard_tabs:
       <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-        <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}"
-             aria-current="${'page' if reverse('dashboard') == request.path else 'false'}">
+        <a class="${'active ' if reverse('all_courses') == request.path else ''}tab-nav-link" href="${reverse('all_courses')}"
+             aria-current="${'page' if reverse('all_courses') == request.path else 'false'}">
              ${_("Courses")}
         </a>
       </div>
